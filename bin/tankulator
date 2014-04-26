@@ -1,4 +1,8 @@
 #!/usr/bin/env ruby
 require 'tankulator'
 
-Tankulator::run
+if ARGV.count == 0
+	puts "Usage: tankulator <filename>"
+else
+	Tankulator::run
+end
