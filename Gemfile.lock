@@ -1,0 +1,16 @@
+PATH
+  remote: .
+  specs:
+    tankulator (0.0.1)
+
+GEM
+  remote: https://rubygems.org/
+  specs:
+    mercenary (0.3.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  mercenary
+  tankulator!
