@@ -17,9 +17,15 @@ task :default => [:build]
 
 task :build do
 	sh "gem build tankulator.gemspec"
-	puts "Would run sh \"gem install ./#{gem_file}\" "
+	sh "gem install ./#{gem_file}"
 end
 
 task :clean do
-	sh "rm #{gem_file}"
+	sh "rm -f #{gem_file}"
 end
+
+task :uninstall do
+	sh "gem uninstall -x tankulator"
+end
+
+task rebuild: [:uninstall, :clean, :build]

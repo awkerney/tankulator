@@ -1,8 +1,18 @@
 #!/usr/bin/env ruby
 require 'tankulator'
+require 'tankulator/version'
+require 'mercenary'
 
-if ARGV.count == 0
-	puts "Usage: tankulator <filename>"
-else
-	Tankulator::run
+Mercenary.program(:tankulator) do |p|
+	p.version Tankulator::VERSION
+	p.description "A simple(ish) tool for splitting tanks of gas between multiple drivers"
+	p.syntax 'tankulator <filename> [options]'
+
+	p.action do |args, _|
+		if args.empty?
+			puts p
+		else
+			Tankulator.run(args)
+		end
+	end
 end
