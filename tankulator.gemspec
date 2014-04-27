@@ -12,6 +12,7 @@ Gem::Specification.new do |s|
 	s.summary = 'Simple splitting of tank fills'
 	s.description = 'A simple(ish) tool for splitting tanks of gas between multiple drivers'
 	s.author = 'Adam Kerney'
+	s.email = 'opensource@adamwk.com'
 	s.homepage = 'https://github.com/awkerney/tanker'
 	s.files = Dir["{lib}/**/*.rb", "bin/*"]
 	s.require_path = "lib"

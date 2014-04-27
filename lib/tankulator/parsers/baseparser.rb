@@ -1,8 +1,9 @@
 module Tankulator
-	class BaseParser
-		@input_file
-	
-		def self.initialize_with_filename(filename)
+	# This is intended to be an abstract class
+	# The only methods that don't throw exceptions are the initialize methods
+	class Parser
+		
+		def initialize_with_filename(filename)
 			if File.exists?(filename)
 				if File.readable?(filename)
 					@input_file = filename
@@ -12,14 +13,35 @@ module Tankulator
 			else
 				puts "File doesn't exist! Please check your spelling and try again."
 			end
-		end # end self.initialize_with_filename
+		end
 		
-		def self.initialize
+		def initialize
 			print "Please enter the name of the input file: "
 			filename = gets.chomp
-			self.initialize_with_filename(filename)
-		end # end self.initialize
+			initialize_with_filename(filename)
+		end # end self.initialize	
 		
+		def tank_information
+			raise NotImplementedError, 'Abstract implementation should be overridden in a subclass'
+		end
+		
+		def tank_entries
+			raise NotImplementedError, 'Abstract implementation should be overridden in a subclass'
+		end
+		
+		def drivers
+		end
+		
+		protected
+		def read_tank_information
+			raise NotImplementedError, 'Abstract implementation should be overridden in a subclass'
+		end
+		
+		def read_tank_entries
+			raise NotImplementedError, 'Abstract implementation should be overridden in a subclass'
+		end
+		
+		def read_drivers
+		end
 	end
-	
 end

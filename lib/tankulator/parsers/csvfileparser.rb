@@ -1,6 +1,7 @@
 module Tankulator
 	module Parsers
-		class CSVFileParser < BaseParser
+		class CSVFileParser < Parser
+
 		end
 	end
 end
