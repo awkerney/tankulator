@@ -4,13 +4,14 @@ module Tankulator
 		attr_accessor :end_date
 		attr_accessor :cost
 		attr_accessor :total_distance_confirmation
+		attr_accessor :driver_aliases
 	
 		@start_date
 		@end_date
 		@cost
 		@total_distance_confirmation
 
-		@aliases
+		@driver_aliases
 		@entries
 		@drivers
 		@total_distance
@@ -57,7 +58,7 @@ module Tankulator
 		
 			compute_money_owing()
 		end
-	
+=begin	
 		def driver_aliases=(aliases)
 			@aliases = Hash.new
 			parts = aliases.split ','
@@ -66,9 +67,9 @@ module Tankulator
 				@aliases[alias_components[0].chomp] = alias_components[1].chomp
 			end
 		end
-	
+=end
 		def to_s
-			"--Tank Summary--\n\tStart Date: #{@start_date}\tEnd Date: #{@end_date}\tCost: $#{@cost}\n\tTotal Distance: #{self.total_distance.round(1)} KM\n\tNumber of Entries: #{@entries.count}"
+			"--Tank Summary--\n\tStart Date: #{@start_date}\n\tEnd Date: #{@end_date}\n\tCost: $#{@cost}\n\tTotal Distance: #{self.total_distance} KM\n\tNumber of Entries: #{@entries.count}"
 		end
 	
 		private

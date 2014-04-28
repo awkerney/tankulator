@@ -17,21 +17,19 @@ module Tankulator
 			end
 		end
 		
-		def initialize
-			print "Please enter the name of the input file: "
-			filename = gets.chomp
-			initialize_with_filename(filename)
+		def initialize(filename = nil)
+			if filename == nil
+				print "Please enter the name of the input file: "
+				file_name = gets.chomp
+				initialize_with_filename(file_name)
+			else
+				initialize_with_filename(filename)
+			end
 		end # end self.initialize	
 		
-		def tank_information
+		# Returns the tank created by parsing the input file
+		def parsed_tank
 			raise NotImplementedError, 'Abstract implementation should be overridden in a subclass'
-		end
-		
-		def tank_entries
-			raise NotImplementedError, 'Abstract implementation should be overridden in a subclass'
-		end
-		
-		def drivers
 		end
 		
 		protected
@@ -43,7 +41,8 @@ module Tankulator
 			raise NotImplementedError, 'Abstract implementation should be overridden in a subclass'
 		end
 		
-		def read_drivers
+		def read_tank_drivers
+			raise NotImplementedError, 'Abstract implementation should be overridden in a subclass'
 		end
 	end
 end

@@ -1,0 +1,91 @@
+# Tank from April 18 to April 24
+---
+start_date: 2014-04-18
+end_date: 2014-04-24
+cost: 49.68
+total_distance: 488.0
+distance_units: 'KM'
+drivers:
+	- &sa 'Stacey & Adam'
+	- &jk 'Jay & Kamea'
+	- &aj 'Adam & Jay'
+	- &b 'Business'
+types:
+	- &p Personal
+	- &biz Business
+entries:
+	-
+		start: 0.0
+		end: 11.0
+		driver: *sa
+		type: *p
+	-
+		start: 11.0
+		end: 126.2
+		driver: *jk
+		type: *p
+	- 
+		start: 126.2
+		end: 155.8
+		driver: *b
+		type: *biz
+	-
+		start: 155.8
+		end: 176.0
+		driver: *jk
+		type: *p
+	-
+		start: 176.0
+		end: 210.1
+		driver: *sa
+		type: *p
+	-
+		start: 210.0
+		end: 214.2
+		driver: *jk
+		type: *p
+	-
+		start: 214.2
+		end: 234.0
+		driver: *b
+		type: *biz
+	-
+		start: 234.0
+		end: 266.8
+		driver: *sa
+		type: *p
+	-
+		start: 266.8
+		end: 328.4
+		driver: *sa
+		type: *p
+	-
+		start: 328.4
+		end: 431.6
+		driver: *b
+		type: *biz
+	-
+		start: 431.6
+		end: 361.7
+		driver: *sa
+		type: *p
+	-
+		start: 361.7
+		end: 374.2
+		driver: *b
+		type: *biz
+	-
+		start: 374.2
+		end: 404.7
+		driver: *sa
+		type: *p
+	-
+		start: 404.7
+		end: 461.0
+		driver: *b
+		type: *biz
+	-
+		start: 461.0
+		end: 488.0
+		driver: *sa
+		type: *p
