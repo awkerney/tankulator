@@ -2,11 +2,13 @@ module Tankulator
 	# This is intended to be an abstract class
 	# The only methods that don't throw exceptions are the initialize methods
 	class Parser
+		require 'tankulator/entry'
+		require 'tankulator/gastank'
 		
 		def initialize_with_filename(filename)
 			if File.exists?(filename)
 				if File.readable?(filename)
-					@input_file = filename
+					@input_file = File.open(filename, 'r')
 				else
 					puts "Can't read file! Please make sure it is readable then try again."
 				end

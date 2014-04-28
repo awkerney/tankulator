@@ -10,6 +10,9 @@ def require_all(path)
   end
 end
 
+# Ruby Standard Library Requirements
+require 'date'
+
 # Internal Requirements
 require 'tankulator/entry'
 require 'tankulator/gastank'
@@ -29,8 +32,8 @@ module Tankulator
 			inputFile = File.open(inputFileName, 'r')
 			# Read in tank information
 			# the first four lines are as follows
-			newTank.start_date = inputFile.readline # start date
-			newTank.end_date = inputFile.readline # end date
+			newTank.start_date = Date.parse(inputFile.readline) # start date
+			newTank.end_date = Date.parse(inputFile.readline) # end date
 			newTank.cost = inputFile.readline.to_f # cost of tank
 			newTank.total_distance_confirmation = inputFile.readline # total distance
 			newTank.driver_aliases = inputFile.readline # make printing drivers a bit better
