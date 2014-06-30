@@ -30,3 +30,7 @@ The second value is the odometer end value
 The third value is the category and driver
 
 The category is either 'p' for personal or 'b' for business
+
+## Roadmap
+- [ ] YAML Support
+- [ ] JSON Support
