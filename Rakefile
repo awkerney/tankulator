@@ -13,7 +13,7 @@ def gem_file
   "tankulator-#{version}.gem"
 end
 
-task :default => [:rebuild]
+task :default => [:build]
 
 task :build do
 	sh "gem build tankulator.gemspec"
