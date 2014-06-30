@@ -13,19 +13,23 @@ def gem_file
   "tankulator-#{version}.gem"
 end
 
-task :default => [:build]
+task :default => [:rebuild]
 
 task :build do
 	sh "gem build tankulator.gemspec"
-	sh "gem install ./#{gem_file}"
+	sh "mkdir pkg > /dev/null"
+	sh "mv #{gem_file} pkg/"
 end
 
+task :install do
+	sh "gem install ./pkg/#{gem_file}"
+end
 task :clean do
-	sh "rm -f #{gem_file}"
+	sh "rm -rf pkg/"
 end
 
 task :uninstall do
 	sh "gem uninstall -x tankulator"
 end
 
-task rebuild: [:uninstall, :clean, :build]
+task rebuild: [:uninstall, :clean, :build, :install]

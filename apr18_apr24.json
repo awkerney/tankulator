@@ -1,0 +1,51 @@
+{
+	"start_date":"april 18, 2014",
+	"end_date": "april 24, 2014",
+	"cost": 49.68,
+	"total_distance": 488.0,
+	"distance_units": "KM",
+	"drivers": {
+		"j": "Joe",
+		"r": "Rex",
+		"b": "Business",
+		"jr": "Joe & Rex"
+	},
+	"types": {
+		"p": "Personal",
+		"b": "Business"
+	},
+	"entry_objects": [
+		{"start":0.0, "end":11.0, "driver": "j", "type": "p"},
+		{"start":11.0, "end":126.2, "driver": "r", "type": "p"},
+		{"start":126.2, "end":155.8, "driver": "b", "type": "b"},
+		{"start":155.8, "end":176.0, "driver": "r", "type": "p"},
+		{"start":176.0, "end":210.1, "driver": "j", "type": "p"},
+		{"start":210.1, "end":214.2, "driver": "r", "type": "p"},
+		{"start":214.2, "end":234.0, "driver": "b", "type": "b"},
+		{"start":234.0, "end":266.8, "driver": "j", "type": "p"},
+		{"start":266.8, "end":328.4, "driver": "j", "type": "p"},
+		{"start":328.4, "end":341.6, "driver": "b", "type": "b"},
+		{"start":341.6, "end":361.7, "driver": "aj", "type": "p"},
+		{"start":361.7, "end":374.2, "driver": "b", "type": "b"},
+		{"start":374.2, "end":404.7, "driver": "j", "type": "p"},
+		{"start":404.7, "end":461.0, "driver": "b", "type": "b"}
+		{"start":461.0, "end":488.0, "driver": "j", "type": "p"}
+	],
+	"entry_lines": [
+		"0.0,11.0,p:s",
+		"11.0,126.2,p:r",
+		"126.2,155.8,b",
+		"155.8,176.0,p:r",
+		"176.0,210.1,p:s",
+		"210.1,214.2,p:r",
+		"214.2,234.0,b",
+		"234.0,266.8,p:j",
+		"266.8,328.4,p:j",
+		"328.4,341.6,b",
+		"341.6,361.7,p:aj",
+		"361.7,374.2,b",
+		"374.2,404.7,p:s",
+		"404.7,461.0,b",
+		"461.0,488.0,p:s"
+	]
+}
