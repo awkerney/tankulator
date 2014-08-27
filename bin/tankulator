@@ -6,13 +6,14 @@ require 'mercenary'
 Mercenary.program(:tankulator) do |p|
 	p.version Tankulator::VERSION
 	p.description "A simple(ish) tool for splitting tanks of gas between multiple drivers"
-	p.syntax 'tankulator <filename> [options]'
+	p.syntax 'tankulator [options] <filename>'
+	p.option 'csv', '--csv', 'Denotes a CSV file as the input file'
 
-	p.action do |args, _|
+	p.action do |args, options|
 		if args.empty?
 			puts p
 		else
-			Tankulator.run(args)
+			Tankulator.run(args, csv: options['csv'])
 		end
 	end
 end
