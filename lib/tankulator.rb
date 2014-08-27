@@ -24,7 +24,6 @@ module Tankulator
 	# Starts running everything
 	# Returns nothing
 	def self.run(args, options)
-
 		inputFileName = args[0]
 
 		if File.exists?(inputFileName)
@@ -56,12 +55,24 @@ module Tankulator
 			# puts "*" * 60
 			# puts "*" * 60
 			# puts "*" * 60
+
+            if options[:csv] && options[:yaml]
+                puts "Only one file type can be specified at once!"
+                exit
+            end
+
+            parser = Object.new
+
             if options[:csv]
-    			csvParser = Tankulator::Parsers::CSVFileParser.new(inputFileName)
-    			csvTank =  csvParser.parsed_tank
-    			puts csvTank
-    			csvTank.driver_summaries
-            elsif options[:]
+    			parser = Tankulator::Parsers::CSVFileParser.new(inputFileName)
+            elsif options[:yaml]
+                parser = Tankulator::Parsers::YAMLFileParser.new(inputFileName)
+            end
+
+            tank = parser.parsed_tank
+
+            puts tank
+            tank.driver_summaries
 
 		else
 			puts 'That file does not exist. Exiting.'
