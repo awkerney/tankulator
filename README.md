@@ -2,6 +2,15 @@
 ## Tankulator
 It basically just calculates between a given set of people who used how much
 
+To install:
+`bundle install`
+`rake build && rake install`
+
+###Requirements
+- libyaml
+- Psych
+- Mercenary
+
 ### Formats
 Tankulator currently only accepts CSV files. To see what that looks like open `apr18_apr24_.csv`
 

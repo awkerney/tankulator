@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    tankulator (0.0.1.alpha1)
+    tankulator (0.0.1)
 
 GEM
   remote: https://rubygems.org/
