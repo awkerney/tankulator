@@ -23,7 +23,7 @@ Line 6 and everything after it are the entries
 
 These lines are formatted as follows:
 
-The first value is the odometer start value 
+The first value is the odometer start value
 
 The second value is the odometer end value
 
@@ -32,5 +32,4 @@ The third value is the category and driver
 The category is either 'p' for personal or 'b' for business
 
 ## Roadmap
-- [ ] YAML Support
 - [ ] JSON Support
