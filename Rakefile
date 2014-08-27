@@ -17,7 +17,7 @@ task :default => [:rebuild]
 
 task :build do
 	sh "gem build tankulator.gemspec"
-	sh "mkdir pkg > /dev/null"
+	system("mkdir pkg > /dev/null")
 	sh "mv #{gem_file} pkg/"
 end
 
