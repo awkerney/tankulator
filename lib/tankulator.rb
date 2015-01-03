@@ -69,10 +69,14 @@ module Tankulator
                 parser = Tankulator::Parsers::YAMLFileParser.new(inputFileName)
             end
 
-            tank = parser.parsed_tank
+			if options[:csv] || options[:yaml]
+				tank = parser.parsed_tank
 
-            puts tank
-            tank.driver_summaries
+				puts tank
+				tank.driver_summaries
+			else
+				puts 'Filetype argument must be given!'
+			end
 
 		else
 			puts 'That file does not exist. Exiting.'
