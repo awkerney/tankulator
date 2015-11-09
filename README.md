@@ -12,7 +12,7 @@ To install:
 - Mercenary
 
 ### Formats
-Tankulator currently accepts CSV and YAML files. To see what the structure of each format open the respective file' 
+Tankulator currently accepts CSV and YAML files. To see what the structure of each format open the respective file
 
 ### CSV Format Explanation (because it's a little dumb)
 The first 5 lines are purely informational
